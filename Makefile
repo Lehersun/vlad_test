@@ -5,3 +5,6 @@ stop:
 restart:
 	docker compose down
 	docker compose up -d
+init:
+	docker compose up -d
+	docker compose run api composer install
