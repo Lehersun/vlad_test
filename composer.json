@@ -15,6 +15,7 @@
         "symfony/yaml": "7.1.*"
     },
     "require-dev": {
+        "symplify/config-transformer": "^12.3"
     },
     "config": {
         "allow-plugins": {
