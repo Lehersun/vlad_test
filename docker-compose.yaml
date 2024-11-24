@@ -6,3 +6,15 @@ services:
       - "80:80"
     volumes:
       - .:/var/www/html
+  db:
+    image: mariadb:11.6.2-ubi9
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: password
+      MARIADB_USER: user
+      MARIADB_PASSWORD: password
+      MARIADB_DATABASE: app
+    volumes:
+        - db_vol:/var/lib/mysql
+volumes:
+  db_vol:
